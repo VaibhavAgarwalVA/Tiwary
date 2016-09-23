@@ -24,7 +24,9 @@ public class intro_page {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setName("Tiwary's");
 		frame.setBounds(100, 100, 450, 300);
+	
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -55,9 +57,12 @@ public class intro_page {
 		btnPressToContinue.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				decision_root window = new decision_root();
+				frame.setVisible(false);
 				window.frame.setVisible(true);
 			}
 		});
+		
+		
 		btnPressToContinue.setBackground(Color.DARK_GRAY);
 		btnPressToContinue.setForeground(Color.LIGHT_GRAY);
 		btnPressToContinue.setBounds(127, 166, 159, 25);
