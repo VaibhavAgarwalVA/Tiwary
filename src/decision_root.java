@@ -34,18 +34,46 @@ public class decision_root {
 		frame.getContentPane().add(lblWhatDoYou);
 		
 		JButton btnANewCustomer = new JButton("A NEW customer on the floor !!");
+		btnANewCustomer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				new_customer window = new new_customer();
+				frame.setVisible(false);
+				window.frame.setVisible(true);
+			}
+		});
 		btnANewCustomer.setBounds(72, 67, 298, 25);
 		frame.getContentPane().add(btnANewCustomer);
 		
 		JButton btnListOfConnoisseurs = new JButton("LIST of connoisseurs !!");
+		btnListOfConnoisseurs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				list_customers window = new list_customers();
+				frame.setVisible(false);
+				window.frame.setVisible(true);
+			}
+		});
 		btnListOfConnoisseurs.setBounds(72, 109, 298, 25);
 		frame.getContentPane().add(btnListOfConnoisseurs);
 		
 		JButton btnSomeoneWantsAn = new JButton("Someone wants an EDIT !!");
+		btnSomeoneWantsAn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				edit_customer window = new edit_customer();
+				frame.setVisible(false);
+				window.frame.setVisible(true);
+			}
+		});
 		btnSomeoneWantsAn.setBounds(72, 148, 298, 25);
 		frame.getContentPane().add(btnSomeoneWantsAn);
 		
 		JButton btnAddMoreMoments = new JButton("ADD more moments of fun !!");
+		btnAddMoreMoments.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				add_order window = new add_order();
+				frame.setVisible(false);
+				window.frame.setVisible(true);
+			}
+		});
 		btnAddMoreMoments.setBounds(72, 191, 298, 48);
 		frame.getContentPane().add(btnAddMoreMoments);
 		
