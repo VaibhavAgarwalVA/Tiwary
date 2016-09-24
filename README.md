@@ -1,9 +1,6 @@
 ### Shop Management Software for :
-## Tiwary's 
+# Tiwary's 
 #### IIT Kharagpur 
-
-## --------
-## --------
 
 Create and manage student accounts for Tiwary's. 
 The software facilitates the storage and management of student accounts. 
