@@ -47,7 +47,6 @@ public class add_order {
 		textField.setBounds(202, 69, 143, 19);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
-		final String room = textField.getText(); 
 		
 		JLabel lblAmountinr = new JLabel("Amount (INR) :");
 		lblAmountinr.setBounds(76, 108, 108, 15);
@@ -62,6 +61,7 @@ public class add_order {
 		btnAddTheShiz.setForeground(UIManager.getColor("Button.background"));
 		btnAddTheShiz.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				String room = textField.getText(); 
 				int n = main.vec.size();
 				int i = -1;
 				for(int j=0;j<n;j++){
