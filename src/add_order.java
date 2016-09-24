@@ -65,7 +65,7 @@ public class add_order {
 				int n = main.vec.size();
 				int i = -1;
 				for(int j=0;j<n;j++){
-					if(main.vec.elementAt(j).get_room() == room){
+					if(main.vec.elementAt(j).get_room().equals(room)){
 						i=j;
 						break;
 					}

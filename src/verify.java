@@ -49,7 +49,7 @@ public class verify {
 		btnBooya.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String stored = main.vec.elementAt(i).get_password();
-				if(stored == passkey){
+				if(stored.equals(passkey)){
 					double amt = main.vec.elementAt(i).get_amount();
 					double new_amt = amount + amt;
 					main.vec.elementAt(i).set_amount(new_amt);

@@ -78,7 +78,7 @@ public class edit_page {
 		passwordField = new JPasswordField();
 		passwordField.setBounds(182, 166, 220, 19);
 		frame.getContentPane().add(passwordField);
-		passwordField.setText("Enter new or current password...");
+		passwordField.setText(main.vec.elementAt(ind).get_password());
 		
 		JButton btnAddMe = new JButton("Confirm and Edit !");
 		btnAddMe.addActionListener(new ActionListener() {

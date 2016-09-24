@@ -86,14 +86,9 @@ public class new_customer {
 				new_user.set_name(textField.getText());
 				new_user.set_password(passwordField.getText());
 				
-				boolean st = main.vec.add(new_user);
+				main.vec.addElement(new_user);
 				
-				if(st){
-					JOptionPane.showMessageDialog(null, "Added Successfully !!");
-				}
-				else{
-					JOptionPane.showMessageDialog(null, "Failed. Try Again..");
-				}
+				JOptionPane.showMessageDialog(null, "Added Successfully !!");
 				
 				decision_root window = new decision_root();
 				frame.setVisible(false);

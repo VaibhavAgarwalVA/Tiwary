@@ -62,14 +62,14 @@ public class edit_customer {
 				int n = main.vec.size();
 				int j=-1;
 				for(int i=0;i<n;i++){
-					if(main.vec.elementAt(i).get_room() == room_no){
+					if(main.vec.elementAt(i).get_room().equals(room_no)){
 						j=i;
 						break;
 					}
 				}
 				if(j>-1){
 					String passkey = passwordField.getText();
-					if(main.vec.elementAt(j).get_password() == passkey){
+					if(main.vec.elementAt(j).get_password().equals(passkey)){
 						edit_page window = new edit_page(j);
 						frame.setVisible(false);
 						window.frame.setVisible(true);
