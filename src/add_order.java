@@ -2,6 +2,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -14,7 +16,7 @@ public class add_order {
 
 	public JFrame frame;
 	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField amount_field;
 
 	/**
 	 * Create the application.
@@ -45,23 +47,41 @@ public class add_order {
 		textField.setBounds(202, 69, 143, 19);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
+		final String room = textField.getText(); 
 		
 		JLabel lblAmountinr = new JLabel("Amount (INR) :");
 		lblAmountinr.setBounds(76, 108, 108, 15);
 		frame.getContentPane().add(lblAmountinr);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(202, 106, 143, 19);
-		frame.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		amount_field = new JTextField();
+		amount_field.setBounds(202, 106, 143, 19);
+		frame.getContentPane().add(amount_field);
+		amount_field.setColumns(10);
 		
 		JButton btnAddTheShiz = new JButton("Come-on add the shiz NOW !!");
 		btnAddTheShiz.setForeground(UIManager.getColor("Button.background"));
 		btnAddTheShiz.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				verify window = new verify();
-				frame.setVisible(false);
-				window.frame.setVisible(true);
+				int n = main.vec.size();
+				int i = -1;
+				for(int j=0;j<n;j++){
+					if(main.vec.elementAt(j).get_room() == room){
+						i=j;
+						break;
+					}
+				}
+				double amt = Double.parseDouble(amount_field.getText());
+				if(i>=0){
+					verify window = new verify(i,amt);
+					frame.setVisible(false);
+					window.frame.setVisible(true);
+				}
+				else{
+					JOptionPane.showMessageDialog(null, "No account found !!");
+					add_order window = new add_order();
+					frame.setVisible(false);
+					window.frame.setVisible(true);
+				}
 			}
 		});
 		btnAddTheShiz.setBackground(new Color(0, 102, 51));
